@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "lovecraft"
+version = "0.1.0"
+description = "Converse with H.P. Lovecraft"
+authors = ["Russell Jurney <russell.jurney@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+langchain = "^0.1.11"
+langchain-openai = "^0.0.8"
+openai = "^1.13.3"
+bs4 = "^0.0.2"
+beautifulsoup4 = "^4.12.3"
+streamlit = "^1.31.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+flake8 = "^7.0.0"
+isort = "^5.13.2"
+mypy = "^1.8.0"
+pre-commit = "^3.6.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
