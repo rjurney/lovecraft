@@ -7,13 +7,14 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 langchain = "^0.1.11"
 langchain-openai = "^0.0.8"
 openai = "^1.13.3"
 bs4 = "^0.0.2"
 beautifulsoup4 = "^4.12.3"
 streamlit = "^1.31.1"
+scrapy = "^2.11.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.2.0"
