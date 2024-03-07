@@ -14,6 +14,7 @@ class LovecraftSpider(scrapy.Spider):
     custom_settings = {
         "FEED_FORMAT": "jsonlines",
         "FEED_URI": "data/stories.json",
+        # Don't flood the nice people at hplovecraft.com
         "DOWNLOAD_DELAY": 0.25,
     }
 
@@ -30,4 +31,4 @@ class LovecraftSpider(scrapy.Spider):
         # Assuming the story text might not always be within a specific id, we extract all text
         # You may need to adjust the extraction method based on the page structure
         # story_text = "\n".join([p.get_text(strip=True) for p in soup.select("p")])
-        yield {"url": response.url, "text": soup.get_text(strip=True)}
+        yield {"url": response.url, "text": soup.text}
