@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "lovecraft"
 version = "0.1.0"
-description = "Converse with H.P. Lovecraft"
+description = "Converse with H.P. Lovecraft via Retrieval Augmented Generation."
 authors = ["Russell Jurney <russell.jurney@gmail.com>"]
 license = "MIT"
 readme = "README.md"
@@ -15,6 +15,8 @@ bs4 = "^0.0.2"
 beautifulsoup4 = "^4.12.3"
 streamlit = "^1.31.1"
 scrapy = "^2.11.1"
+lxml = "^5.1.0"
+opensearch-py = "^2.4.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.2.0"
