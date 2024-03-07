@@ -1,10 +1,5 @@
-import os
-
 import scrapy
 from bs4 import BeautifulSoup
-
-# Don't flood the server with requests
-os.environ["DOWNLOAD_DELAY"] = 0.25
 
 
 class LovecraftSpider(scrapy.Spider):
