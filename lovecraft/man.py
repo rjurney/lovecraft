@@ -37,7 +37,7 @@ def main():
 
     # Setup a OpenSearch to store the embeddings
     opensearch = OpenSearchVectorSearch(
-        index_name="academic_papers",
+        index_name="lovecraft",
         embedding_function=cached_embedder,
         opensearch_url="http://admin:admin@localhost:9200",
     )
