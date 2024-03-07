@@ -16,10 +16,11 @@ RUN sudo apt update && \
 # Go back to jovyan user so we don't have permission problems
 USER ${NB_USER}
 
-# Install poetry so we can install our package requirements
+# Install pipx so we can install poetry system wide
 RUN python3 -m pip install --no-cache-dir --user pipx && \
     python3 -m pipx ensurepath
 
+# Now install poetry to install our dependencies
 ENV PATH "/home/jovyan/.local/bin:$PATH"
 RUN pipx install poetry==${POETRY_VERSION}
 
