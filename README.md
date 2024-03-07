@@ -22,8 +22,11 @@ pipx install poetry
 poetry install
 ```
 
-### Run the Project
+## Run the Project
+
+1. Get the stories from hplovecraft.com [read them, they're great!]
 
 ```bash
-python ./app.py
+scrapy runspider lovecraft/scrape.py
 ```
+
