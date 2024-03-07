@@ -11,7 +11,11 @@ class LovecraftSpider(scrapy.Spider):
     name = "lovecraft"
     allowed_domains = ["hplovecraft.com"]
     start_urls = ["https://www.hplovecraft.com/writings/texts/"]
-    custom_settings = {"FEED_FORMAT": "jsonlines", "FEED_URI": "data/stories.json"}
+    custom_settings = {
+        "FEED_FORMAT": "jsonlines",
+        "FEED_URI": "data/stories.json",
+        "DOWNLOAD_DELAY": 0.25,
+    }
 
     def parse(self, response):
         # Extract and follow story links that match the expected pattern
