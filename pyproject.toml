@@ -18,6 +18,9 @@ scrapy = "^2.11.1"
 lxml = "^5.1.0"
 opensearch-py = "^2.4.2"
 langchain-community = "^0.0.27"
+sentence-transformers = "^2.5.1"
+langsmith = "^0.1.23"
+langchainhub = "^0.1.15"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.2.0"
