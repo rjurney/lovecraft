@@ -5,6 +5,53 @@ description = "Converse with H.P. Lovecraft via Retrieval Augmented Generation."
 authors = ["Russell Jurney <russell.jurney@gmail.com>"]
 license = "MIT"
 readme = "README.md"
+packages = [{include = "lovecraft"}]
+keywords = [
+    "lovecraft",
+    "retrieval augmented generation",
+    "rag",
+    "openai",
+    "gpt-4",
+    "llm",
+    "language model",
+    "nlp",
+    "natural language processing",
+    "ai",
+    "artificial intelligence",
+    "conversational ai",
+    "H.P. Lovecraft",
+    "OpenSearch"
+]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Console",
+    "Framework :: Flake8",
+    "Framework :: Pytest",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Database",
+    "Topic :: Database :: Database Engines/Servers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+include = ["LICENSE"]
+
+[project]
+name = "lovecraft"
 
 [tool.poetry.dependencies]
 python = "^3.11"
