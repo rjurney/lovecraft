@@ -4,3 +4,4 @@ __pycache__
 logs
 envs
 dist
+.DS_Store
