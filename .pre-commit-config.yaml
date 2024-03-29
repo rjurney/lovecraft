@@ -35,7 +35,6 @@ repos:
         entry: pytest
         language: system
         types: [python]
-        exclude: tests
   - repo: local
     hooks:
       - id: build
