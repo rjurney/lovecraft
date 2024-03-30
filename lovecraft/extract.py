@@ -38,7 +38,15 @@ BOOK_CONFIG: Dict[str, Dict[str, Union[str, int]]] = {
 }
 CACHE_PATH = "data/corrected_pages.json"
 
-# Get the raw pages from each book
+# Let's get this party started!
+print(
+    "\nThis program extracts and cleans the OCR'd text from the PDFs of 5 volumes "
+    "of Lovecraft's letters using PyPDF and OpenAI's GPT-4.\n\n"
+)
+
+# Get the raw pages from each book from the OCR text included in the PDF files.
+# Note: there is no text in the Arkham Volume 5 of Lovecraft's letters. We must OCR this
+# using Amazon Textract or similar.
 raw_contents: defaultdict = defaultdict(list)
 for volume, config in BOOK_CONFIG.items():
     reader: PdfReader = PdfReader(f"data/{config['filename']}")
@@ -90,8 +98,9 @@ else:
 
 for volume in raw_contents.keys():
     print(f"Cleaning up {volume} ...")
+    page_count = len(raw_contents[volume])
     # For each page in the volume, run the LLMChain to clean it up
-    for i, page in enumerate(tqdm(raw_contents[volume], total=len(raw_contents[volume]))):
+    for i, page in enumerate(tqdm(raw_contents[volume], total=page_count)):
 
         if (
             volume in corrected_pages
@@ -101,15 +110,15 @@ for volume in raw_contents.keys():
             print(f"Skipping page {i} as it's already been corrected.")
             continue
 
-        print("Submitting page {i} for correction...")
+        print(f"Submitting page {i} out of {page_count} for correction...")
         corrected_page = book_chain.run(page_number=i, page_content=page)
         corrected_pages[volume].append(corrected_page)
 
-        # Cache every 10 pages
-        if i % 10 == 0:
-            with open(CACHE_PATH, "w") as file:
-                json.dump(corrected_pages, file, sort_keys=True, indent=4)
-                print("Cached pages 0-{i} for {volume}.")
+        print(f"Page {i} corrected:\n\n {corrected_page}")
+
+        with open(CACHE_PATH, "w") as file:
+            json.dump(corrected_pages, file, sort_keys=True, indent=4)
+            print(f"Cached pages 0-{i} for {volume}.")
 
         # Please Hammer, don't hurt 'OpenAI
         time.sleep(0.1)
