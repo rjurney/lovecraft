@@ -23,9 +23,9 @@ BOOK_CONFIG: Dict[str, Dict[str, Union[str, int]]] = {
     "volume_2": {
         "filename": "Lovecraft, H. P. - Selected Letters II (Arkham House, 1968).pdf",
     },
-    "volume_3": {
-        "filename": "Lovecraft, H. P. - Selected Letters III (1929-1931).pdf",
-    },
+    # "volume_3": {
+    #     "filename": "Lovecraft, H. P. - Selected Letters III (1929-1931).pdf",
+    # },
     "volume_4": {
         "filename": "Lovecraft, H. P. - Selected Letters IV (1932-1934).pdf",
     },
