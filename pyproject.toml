@@ -70,6 +70,8 @@ langsmith = "^0.1.23"
 langchainhub = "^0.1.15"
 pypdf = "^4.1.0"
 pillow = "^10.2.0"
+types-beautifulsoup4 = "^4.12.0.20240229"
+types-tqdm = "^4.66.0.20240106"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.2.0"
@@ -94,12 +96,18 @@ profile = "black"
 src_paths = ["graphlet", "test"]
 
 [tool.mypy]
-python_version = "3.10"
-mypy_path = ["graphlet", "test"]
+python_version = "3.11"
+mypy_path = ["lovecraft", "test"]
 warn_return_any = true
 warn_unused_configs = true
 warn_redundant_casts = true
 warn_unused_ignores = true
+check_untyped_defs = true
+ignore_errors = false
+
+[[tool.mypy.overrides]]
+module = "scrapy.*"
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = [

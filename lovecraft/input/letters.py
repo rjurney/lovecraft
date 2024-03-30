@@ -3,13 +3,12 @@ import json
 import os
 import time
 from collections import defaultdict
-from typing import Dict, List, Type, Union
+from typing import Dict, List, Union
 
 from langchain.chains import LLMChain
 from langchain.prompts import (
     ChatPromptTemplate,
     HumanMessagePromptTemplate,
-    PromptTemplate,
     SystemMessagePromptTemplate,
 )
 from langchain_openai.chat_models import ChatOpenAI
@@ -60,7 +59,7 @@ for volume, config in BOOK_CONFIG.items():
 # Now use OpenAI GPT-4 to clean up the OCR'd text for each page in each book
 llm: ChatOpenAI = ChatOpenAI(model="gpt-4-turbo-preview", temperature=0.25)
 
-messages: List[Type[PromptTemplate]] = [
+messages: List[Union[SystemMessagePromptTemplate, HumanMessagePromptTemplate]] = [
     SystemMessagePromptTemplate.from_template(
         "I have text from pages of a book containing letters from the 1930s by the "
         "horror writer H.P. Lovecraft. "
