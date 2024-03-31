@@ -89,15 +89,15 @@ build-backend = "poetry.core.masonry.api"
 [tool.black]
 line-length = 100
 target-version = ["py310"]
-include = ["graphlet", "test"]
+include = ["lovecraft", "tests"]
 
 [tool.isort]
 profile = "black"
-src_paths = ["graphlet", "test"]
+src_paths = ["lovecraft", "tests"]
 
 [tool.mypy]
 python_version = "3.11"
-mypy_path = ["lovecraft", "test"]
+mypy_path = ["lovecraft", "tests"]
 warn_return_any = true
 warn_unused_configs = true
 warn_redundant_casts = true
