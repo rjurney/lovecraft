@@ -1,5 +1,10 @@
-def test_imports():
-    from lovecraft import extract, man
+import pytest  # noqa: F401
 
-    assert extract
-    assert man
+
+def test_imports():
+    from lovecraft import cli
+    from lovecraft.input import letters, stories
+
+    assert cli
+    assert letters
+    assert stories
