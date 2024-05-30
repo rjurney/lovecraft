@@ -75,6 +75,7 @@ types-tqdm = "^4.66.0.20240106"
 click = "^8.1.7"
 tenacity = "^8.3.0"
 diskcache = "^5.6.3"
+diskcache-stubs = "^5.6.3.4.20240513"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.2.0"

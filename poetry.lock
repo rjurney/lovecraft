@@ -643,6 +643,20 @@ files = [
 ]
 
 [[package]]
+name = "diskcache-stubs"
+version = "5.6.3.4.20240513"
+description = "diskcache stubs"
+optional = false
+python-versions = ">=3"
+files = [
+    {file = "diskcache_stubs-5.6.3.4.20240513-py3-none-any.whl", hash = "sha256:6691fe3a7db7013dd6e373e8e5c412ddad840c7800da65c2be540cdc08ef1b13"},
+    {file = "diskcache_stubs-5.6.3.4.20240513.tar.gz", hash = "sha256:81843aa7e3af815e63ba3848161a8aa2404a64ee854f7305ab6fb5a38874d110"},
+]
+
+[package.dependencies]
+typing-extensions = ">=4.4.0"
+
+[[package]]
 name = "distlib"
 version = "0.3.8"
 description = "Distribution utilities"
@@ -4592,4 +4606,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "a98521e7859c952ab7e3057d6b556d9c9b403e283f86b8e452dfa1c83b070ad7"
+content-hash = "f233655e00d27a0665cfea684c9bec5ee613e40e6757dd0c4e34ffb0dfe5f161"
