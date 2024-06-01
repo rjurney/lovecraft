@@ -85,6 +85,7 @@ mypy = "^1.8.0"
 pre-commit = "^3.6.2"
 ipython = "^8.22.2"
 pytest = "^8.1.1"
+twine = "^5.1.0"
 
 [build-system]
 requires = ["poetry-core"]
