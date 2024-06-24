@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lovecraft"
-version = "0.1.0"
+version = "0.1.1"
 description = "Converse with H.P. Lovecraft via Retrieval Augmented Generation."
 authors = ["Russell Jurney <russell.jurney@gmail.com>"]
 license = "MIT"
