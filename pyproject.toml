@@ -5,6 +5,7 @@ description = "Converse with H.P. Lovecraft via Retrieval Augmented Generation."
 authors = ["Russell Jurney <russell.jurney@gmail.com>"]
 license = "MIT"
 readme = "README.md"
+homepage = "https://github.com/rjurney/lovecraft"
 packages = [{include = "lovecraft"}]
 keywords = [
     "lovecraft",
